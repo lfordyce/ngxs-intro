@@ -1,0 +1,8 @@
+<div id="registration">
+  <h3>Register here</h3>
+  <hr>
+  <div *ngFor="let user of users$ | async" class="row">
+    <h4>{{ user.name }}</h4>
+    <button (click)="registerUser(user)">Register</button>
+  </div>
+</div>

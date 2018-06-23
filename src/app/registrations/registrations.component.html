@@ -1,0 +1,12 @@
+<div id="registrations">
+  <div class="summary">
+    <h3>Registrations</h3>
+    <h5>Total: {{ total$ | async }}</h5>
+  </div>
+  <hr>
+  <div class="row" *ngFor="let registration of registrations$ | async">
+    <h4>{{ registration.name }}</h4>
+    <span (click)="unregister(registration)">(Unregister)</span>
+    <div class="date">{{ registration.date }}</div>
+  </div>
+</div>
